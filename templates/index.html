@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>OS Scheduler Visualizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  </head>
+  <body>
+    <div class="ui middle center aligned container padded basic segment">
+      <h1 class="ui header">
+        <div class="content">
+          OS Scheduler Visualizer
+        </div>
+      </h1>
+      <div class="ui large center aligned raised segment">
+        <form class="ui form left aligned padded basic segment" action="visualize" method="post" enctype=multipart/form-data id="visualize_form">
+          <div class="field">
+              <input type="file" name="{{ name }}">
+          </div>
+          <input type="submit" class="ui fluid large black submit button" value="Visualize">
+          <div class="ui success message" id="message"><div class="header">Done!</div></div>
+          <div class="ui error message" id="message"><div class="header">Error occurred!</div></div>
+        </form>
+      </div>
+    </div>
+    <footer class="ui inverted vertical footer segment center aligned" style="position: absolute; bottom: 0; width: 100%;">
+      <div class="ui container">
+        <small>&copy; Last updated March 2020 by <a href="https://alaref.me" target="_blank" rel="noopener noreferrer">Muhammad Hamdy AlAref</a></small>
+      </div>
+    </footer>
+  </body>
+</html> 
